@@ -1,46 +1,51 @@
-# WalletConnect v2 Examples
+# React dApp (with standalone v2 client)
 
-Catalogue of various wallet and dapp examples implementing WalletConnect's **SDKs and APIs**. Each example contains its own README with further instructions and explanations.
+🔗 Live dapp demo - https://react-app.walletconnect.com/ <br />
+🔗 Live wallet demo - https://react-wallet.walletconnect.com/ <br />
+📚 WalletConnect v2 Docs - https://docs.walletconnect.com/2.0
 
-### Web3Modal SDK
+## Overview
 
-- [Next App router + Web3Modal](https://github.com/WalletConnect/web-examples/tree/main/dapps/web3modal/next)
-- [React + Web3Modal](https://github.com/WalletConnect/web-examples/tree/main/dapps/web3modal/react)
-- [SvelteKit + Web3Modal](https://github.com/WalletConnect/web-examples/tree/main/dapps/web3modal/svelte) ([Demo](https://evmtest.walletconnect.com/))
+This is an example implementation of a React dApp (generated via `create-react-app`) using the standalone
+client for WalletConnect v2 to:
 
-### Web3Wallet SDK
+- handle pairings
+- manage sessions
+- send JSON-RPC requests to a paired wallet
 
-**Wallets:**
+## Running locally
 
-- [React Web3Wallet SDK](https://github.com/WalletConnect/web-examples/tree/main/advanced/wallets/react-web3wallet) ([Demo](https://react-web3wallet.vercel.app))
+Install the app's dependencies:
 
-### Sign API
+```bash
+yarn
+```
 
-**Wallets:**
+Set up your local environment variables by copying the example into your own `.env.local` file:
 
-- [React Wallet (Sign v1 + v2)](https://github.com/WalletConnect/web-examples/tree/main/advanced/wallets/react-wallet-v2) ([Demo](https://react-wallet.walletconnect.com/))
+```bash
+cp .env.local.example .env.local
+```
 
-**dApps:**
+Your `.env.local` now contains the following environment variables:
 
-- [React dApp (with standalone client) - v2](https://github.com/WalletConnect/web-examples/tree/main/advanced/dapps/react-dapp-v2) ([Demo](https://react-app.walletconnect.com/))
-- [React dApp (with EthereumProvider + Ethers.js) - v2](https://github.com/WalletConnect/web-examples/tree/main/advanced/dapps/react-dapp-v2-with-ethers) ([Demo](https://react-dapp-v2-with-ethers.vercel.app/))
-- [React dApp (with EthereumProvider + web3.js) - v2](https://github.com/WalletConnect/web-examples/tree/main/advanced/dapps/react-dapp-v2-with-web3js) ([Demo](https://react-dapp-v2-with-web3js.vercel.app/))
+- `NEXT_PUBLIC_PROJECT_ID` (placeholder) - You can generate your own ProjectId at https://cloud.walletconnect.com
+- `NEXT_PUBLIC_RELAY_URL` (already set)
 
-### Auth API
+## Develop
 
-**Wallets:**
+```bash
+yarn dev
+```
 
-- [React Auth
-  Wallet](https://github.com/WalletConnect/web-examples/tree/main/advanced/wallets/react-wallet-auth) ([Demo](https://react-auth-wallet.vercel.app))
+## Test
 
-**dApps:**
+```bash
+yarn test
+```
 
-- [React Auth dApp](https://github.com/WalletConnect/web-examples/tree/main/advanced/dapps/react-dapp-auth) ([Demo](https://react-auth-dapp.walletconnect.com/))
-- [Vue Auth dApp](https://github.com/WalletConnect/web-examples/tree/main/advanced/dapps/vue-dapp-auth) ([Demo](https://vue-dapp-auth.vercel.app/))
+## Build
 
-
-### Chat API
-
-**Wallets:**
-
-- [React Chat Wallet](https://github.com/WalletConnect/web-examples/tree/main/advanced/wallets/react-wallet-chat) ([Demo](https://react-wallet-chat.walletconnect.com/))
+```bash
+yarn build
+```
