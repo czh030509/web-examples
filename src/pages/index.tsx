@@ -50,6 +50,8 @@ import LoaderModal from "../modals/LoaderModal";
 import { numberToHex } from "@walletconnect/encoding";
 import RequestLoaderModal from "../modals/RequestLoaderModal";
 
+import { isTelegramEnvironment, overrideWindowOpen } from "@bitget-wallet/omni-connect";
+
 // Normal import does not work here
 const { version } = require("@walletconnect/sign-client/package.json");
 
@@ -107,6 +109,21 @@ const Home: NextPage = () => {
       closeModal();
     }
   }, [session, modal]);
+
+  const [isOverridden, setOverridden] = useState(false);
+  useEffect(() => {
+    const initOverrideWindowOpen = async () => {
+      // 判断是否是Telegram Mini App的环境
+      const isTMA = await isTelegramEnvironment();
+      if (!isTMA) {
+        return;
+      }
+      // 执行@bitget-wallet/omni-connect 初始化方法
+      const res = overrideWindowOpen();
+      setOverridden(res);
+    };
+    initOverrideWindowOpen();
+  }, []);
 
   const onConnect = () => {
     if (typeof client === "undefined") {

@@ -11,6 +11,7 @@
     "prettier:write": "prettier --write '**/*.{js,ts,jsx,tsx}'"
   },
   "dependencies": {
+    "@bitget-wallet/omni-connect": "^0.0.4-beta",
     "@celo/wallet-base": "^5.1.1",
     "@ethereumjs/tx": "^3.5.0",
     "@kadena/client": "^0.5.0",

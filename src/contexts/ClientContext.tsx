@@ -63,6 +63,10 @@ const web3Modal = new Web3Modal({
   projectId: DEFAULT_PROJECT_ID,
   themeMode: "light",
   walletConnectVersion: 2,
+  explorerRecommendedWalletIds: [
+    "38f5d18bd8522c244bdd70cb4a68e0e718865155811c043f052fb9f1c51de662", // Bitget Wallet project ID
+    "21c3a371f72f0057186082edb2ddd43566f7e908508ac3e85373c6d1966ed614", // Bitget Wallet Lite project ID
+  ],
 });
 
 /**
