@@ -380,7 +380,6 @@ export function JsonRpcContextProvider({
       async (chainId: string, address: string) => {
         // test message
         const message = `Hello World!`;
-
         // encode message (hex)
         const hexMsg = encoding.utf8ToHex(message, true);
         // eth_sign params
