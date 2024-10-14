@@ -332,7 +332,7 @@ export function JsonRpcContextProvider({
     testSignPersonalMessage: _createJsonRpcRequestHandler(
       async (chainId: string, address: string) => {
         // test message
-        const message = `My email is john@doe.com - ${Date.now()}`;
+        const message = `Hello World!`;
 
         // encode message (hex)
         const hexMsg = encoding.utf8ToHex(message, true);
@@ -379,7 +379,7 @@ export function JsonRpcContextProvider({
     testEthSign: _createJsonRpcRequestHandler(
       async (chainId: string, address: string) => {
         // test message
-        const message = `My email is john@doe.com - ${Date.now()}`;
+        const message = `Hello World!`;
         // encode message (hex)
         const hexMsg = encoding.utf8ToHex(message, true);
         // eth_sign params
